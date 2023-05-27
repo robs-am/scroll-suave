@@ -59,7 +59,11 @@ function scrollToSection(event) {
   const href = event.currentTarget.getAttribute("href"); //pega o atributo do href
   const section = document.querySelector(href); //selecioan a seção
   //assim relacionamos a seção ao evento da função (esse href é da const, nao da link)
-  console.log(section);
+  const topo = section.offsetTop;
+
+  window.scrollTo({
+    top: topo,
+  });
 }
 
 linksInternos.forEach((link) => {
